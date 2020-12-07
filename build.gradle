@@ -18,7 +18,10 @@ allprojects {
         jcenter()
     }
 }
-
+android{
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+} 
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
